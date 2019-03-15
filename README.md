@@ -28,4 +28,4 @@
 
 * _The program will also determine their average life expectancy on each planet! Factoring in the country the human lives in and their demographic!_
 
-* _If a human has surpassed the average life expectancy, It will tell you the number of years you have lived past your expiration date. LUCKY HUMAN!
+* _If a human has surpassed the average life expectancy, It will tell you the number of years you have lived past your expiration date. LUCKY HUMAN!_
