@@ -14,5 +14,7 @@ $(document).ready(function() {
     const userYoga = $(".yoga").val();
     const userVegan = $(".vegan").val();
     const userAge = new Age(dob, userGender, userSmoker, userYoga, userVegan);
+    console.log("userAge")
+    
   });
 });
