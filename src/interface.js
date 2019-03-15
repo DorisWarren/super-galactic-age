@@ -15,6 +15,24 @@ $(document).ready(function() {
     const userVegan = $(".vegan").val();
     const userAge = new Age(dob, userGender, userSmoker, userYoga, userVegan);
     console.log("userAge")
-    
+
+    const userAgeSeconds = userAge.ageInSeconds();
+    const userMercury = userAge.mercury();
+    const userVenus = userAge.venus();
+    const userMars = userAge.mars();
+    const userJupiter = userAge.jupiter();
+
+    const userEarthLife = userAge.lifeOnEarth();
+    const userMercuryLife = userAge.lifeOnMercury();
+    const userVenuslife = userAge.lifeOnVenus();
+    const userMarslife = userAge.lifeOnMars();
+    const userJupiterlife = userAge.lifeOnJupiter();
+
+    const userEarthYearsLeft =  userAge.earthYearsLeft();
+    const userMercuryYearsLeft = userAge.mercuryYearsLeft();
+    const userVenusYearsLeft = userAge.venusYearsLeft();
+    const userMarsYearsLeft = userAge.marsYearsLeft();
+    const userJupiterYearsLeft = userAge.jupiterYearsLeft();
+
   });
 });
