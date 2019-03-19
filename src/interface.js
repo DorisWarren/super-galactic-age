@@ -16,7 +16,6 @@ $(document).ready(function() {
     const userAge = new Age(dob, userGender, userSmoker, userYoga, userVegan);
     console.log("userAge")
 
-    const userAgeSeconds = userAge.ageInSeconds();
     const userMercury = userAge.mercury();
     const userVenus = userAge.venus();
     const userMars = userAge.mars();
