@@ -13,19 +13,19 @@ $(document).ready(function() {
     const userSmoker = $(".smoker").val()
     const userYoga = $(".yoga").val();
     const userVegan = $(".vegan").val();
-    const userAge = new Age(dob, userGender, userSmoker, userYoga, userVegan);
+    const userAge = new Age(dob, gender, smoker, yoga, vegan);
     console.log("userAge")
 
-    const userMercury = userAge.mercury();
-    const userVenus = userAge.venus();
-    const userMars = userAge.mars();
-    const userJupiter = userAge.jupiter();
+    const mercury = userAge.mercury();
+    const venus = userAge.venus();
+    const mars = userAge.mars();
+    const jupiter = userAge.jupiter();
 
-    const userEarthLife = userAge.lifeOnEarth();
-    const userMercuryLife = userAge.lifeOnMercury();
-    const userVenuslife = userAge.lifeOnVenus();
-    const userMarslife = userAge.lifeOnMars();
-    const userJupiterlife = userAge.lifeOnJupiter();
+    const earthLife = userAge.lifeExpectancyEarth();
+    const mercuryLife = userAge.lifeExpectancyMercury();
+    const venuslife = userAge.lifeExpectancyVenus();
+    const marslife = userAge.lifeExpectancyMars();
+    const jupiterlife = userAge.lifeExpectancyJupiter();
 
     const userEarthYearsLeft =  userAge.earthYearsLeft();
     const userMercuryYearsLeft = userAge.mercuryYearsLeft();

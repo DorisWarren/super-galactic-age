@@ -36,7 +36,7 @@ jupiter() {
   return jupiterAge;
 }
 lifeExpectancyEarth(gender,smoker,yoga,vegan) {
-  let averageLife = 71;
+  let averageLife = 78;
   if (gender === "male") {
     averageLife -= 5;
   }
