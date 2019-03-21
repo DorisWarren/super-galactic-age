@@ -12,14 +12,9 @@ export class Age {
 
 ageInYears() {
   const dob = this.dob;
-  const ageInYears = moment().diff(dob,"years");
   return ageInYears;
 }
 
-ageInSeconds(){
-  const ageInSeconds = this.ageInYears() * 31536000;
-  return ageInSeconds
-}
 
 mercury() {
   const mercuryAge = Math.round(this.ageInYears() * 0.24);
