@@ -31,4 +31,8 @@ describe ("Age",function() {
     const checkYesVegan = new Age (33, "yes","yes")
     expect(checkYesVegan.lifeExpectancyForVegans()).toEqual(65)
   });
+  it("it should calculate age expectancy for yogis ",function(){
+    const checkYesYoga = new Age (55, "yes" )
+    expect(checkYesYoga.lifeExpectancyForYoga()).toEqual(86)
+  });
 });
