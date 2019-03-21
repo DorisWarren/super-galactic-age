@@ -7,23 +7,28 @@ describe ("Age",function() {
     expect (checkAgeMercury.mercury()).toEqual(12)
   });
 
-  it("given a date object it will find the day of the week",function(){
-    expect(datePicker.findDay()).toEqual("Friday")
+  it("it should calculate age on Venus",function(){
+    const checkAgeVenus = new Age (90)
+    expect (checkAgeVenus.venus()).toEqual(56)
   });
 
-  it("given a date string input, should return a date object",function(){
-    expect(typeof datePicker.dateObject).toEqual("object")
+  it("it should calculate age on Mars",function(){
+    const checkAgeMars = new Age (66)
+    expect(checkAgeMars.mars()).toEqual(124)
   });
 
-  it("given a date object it will find the day of the week",function(){
-    expect(datePicker.findDay()).toEqual("Friday")
+  it("it should calculate age on Jupiter",function(){
+    const checkAgeJupiter = new Age (5)
+    expect(checkAgeJupiter.jupiter()).toEqual(59)
   });
 
-  it("given a date string input, should return a date object",function(){
-    expect(typeof datePicker.dateObject).toEqual("object")
+  it("it should calculate age expectancy for yogis ",function(){
+    const checkYesYoga = new Age (55, "yes" )
+    expect(checkYesYoga.lifeExpectancyForYoga()).toEqual(86)
   });
 
-  it("given a date object it will find the day of the week",function(){
-    expect(datePicker.findDay()).toEqual("Friday")
+  it("it should calculate age expectancy for vegans ",function(){
+    const checkYesVegan = new Age (33, "yes","yes")
+    expect(checkYesVegan.lifeExpectancyForVegans()).toEqual(65)
   });
 });
