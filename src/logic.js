@@ -1,112 +1,46 @@
 
 export class Age {
-  constructor(dob, gender, smoker, yoga, vegan) {
-    this.dob = dob;
-    this.gender = gender;
-    this.smoker = smoker;
+  constructor(age, yoga, vegan) {
+    this.age = age;
     this.yoga = yoga;
     this.vegan = vegan;
+    this.averageLife = 78;
+  }
+  mercury() {
+    const mercuryAge = Math.round(this.age * 0.24);
+    return mercuryAge;
   }
 
-}
-
-ageInYears() {
-  const dob = this.dob;
-  return ageInYears;
-}
-
-
-mercury() {
-  const mercuryAge = Math.round(this.ageInYears() * 0.24);
-  return mercuryAge;
-}
-
-venus() {
-  const venusAge = Math.round(this.ageInYears() * 0.62);
-  return venusAge;
-}
-
-mars() {
-  const marsAge = Math.round(this.ageInYears() * 1.88);
-  return marsAge;
-}
-
-jupiter() {
-  const jupiterAge = Math.round(this.ageInYears() *11.86);
-  return jupiterAge;
-}
-lifeExpectancyEarth(gender,smoker,yoga,vegan) {
-  let averageLife = 78;
-  if (gender === "male") {
-    averageLife -= 2;
+  venus() {
+    const venusAge = Math.round(this.age * 0.62);
+    return venusAge;
   }
-  if (smoker === "yes") {
-    averageLife -= 13;
+
+  mars() {
+    const marsAge = Math.round(this.age * 1.88);
+    return marsAge;
   }
-  if (yoga === "yes") {
-    averageLife +=8;
+
+  jupiter() {
+    const jupiterAge = Math.round(this.age *11.86);
+    return jupiterAge;
   }
-  if (vegan === "yes") {
-    averageLife -= 10;
+  lifeExpectancyForVegans() {
+    if(this.vegan === "yes") {
+      const veganYes = this.averageLife - 13;
+      return veganYes;
+    }else if (this.vegan === "no"){
+      const veganNo = this.averageLife + 13;
+      return veganNo;
+    }
   }
-  return averageLife;
-}
-
-lifeExpectancyMercury() {
-  const earthLife = this.lifeExpectancyEarth();
-  const mercuryLife = Math.round(earthLife / 0.24);
-  return mercuryLife;
-}
-
-lifeExpectancyVenus() {
-  const earthLife = this.lifeExpectancyEarth();
-  const venusLife = Math.round(earthLife / 0.62);
-  return venusLife;
-}
-
-lifeExpectancyMars() {
-  const earthLife = this.lifeExpectancyEarth();
-  const marsLife = Math.round(earthLife / 1.88);
-  return marsLife;
-}
-
-lifeExpectancyJupiter() {
-  const earthLife = this.lifeExpectancyEarth();
-  const jupiterLife = Math.round(earthLife / 11.86);
-  return jupiterLife;
-}
-
-earthYearsLeft() {
-  const earthLife = this.lifeExpectancyEarth();
-  const age = this.ageInYears();
-  const yearsLeft = earthLife - age;
-  return yearsLeft;
-}
-
-mercuryYearsLeft() {
-  const mercuryLife = this.lifeExpectancyMercury();
-  const age = this.ageInYears();
-  const yearsLeft = mercuryLife - age;
-  return yearsLeft;
-}
-
-venusYearsLeft() {
-  const venusLife = this.lifeExpectancyVenus();
-  const age = this.ageInYears();
-  const yearsLeft = venusLife - age;
-  return yearsLeft;
-}
-
-marsYearsLeft() {
-  const marsLife = this.lifeExpectancyMars();
-  const age = this.ageInYears();
-  const yearsLeft = marsLife - age;
-  return yearsLeft;
-}
-
-jupiterYearsLeft() {
-  const jupiterLife = this.lifeExpectancyJupiter();
-  const age = this.ageInYears();
-  const yearsLeft = jupiterLife - age;
-  return yearsleft;
+  lifeExpectancyForYoga() {
+    if(this.yoga === "yes") {
+      const yogaYes = this.averageLife + 8;
+      return yogaYes;
+    }else if (this.yoga === "no"){
+      const yogaNo = this.averageLife - 5;
+      return yogaNo;
+    }
+  }
 }
