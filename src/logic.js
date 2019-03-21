@@ -15,12 +15,12 @@ ageInYears() {
   const ageInYears = moment().diff(dob,"years");
   return ageInYears;
 }
+
 ageInSeconds(){
   const ageInSeconds = this.ageInYears() * 31536000;
-
-  }
   return ageInSeconds
 }
+
 mercury() {
   const mercuryAge = Math.round(this.ageInYears() * 0.24);
   return mercuryAge;
@@ -43,16 +43,16 @@ jupiter() {
 lifeExpectancyEarth(gender,smoker,yoga,vegan) {
   let averageLife = 78;
   if (gender === "male") {
-    averageLife -= 5;
+    averageLife -= 2;
   }
   if (smoker === "yes") {
     averageLife -= 13;
   }
   if (yoga === "yes") {
-    averageLife +=5;
+    averageLife +=8;
   }
   if (vegan === "yes") {
-    averageLife -= 3;
+    averageLife -= 10;
   }
   return averageLife;
 }
